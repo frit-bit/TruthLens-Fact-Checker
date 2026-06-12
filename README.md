@@ -46,7 +46,6 @@ LexHack-26-Project/
 
 `config.js` is intentionally ignored by Git and should contain your real local Gemini API key.
 
-> **Note:** `content.js` is referenced in `save.txt` as a planned content script but is not yet part of the active build. See [Roadmap](#roadmap).
 
 ---
 
@@ -226,16 +225,5 @@ A tracked template for API configuration. Use it to create a local `config.js`; 
 - **No content script** — the extension currently reads selected text via `chrome.scripting` injection rather than a persistent `content.js`. This means it cannot passively monitor pages or auto-highlight suspicious claims.
 - **Client-side key exposure** — `config.js` is ignored by Git for local development, but production releases should use a backend proxy so the key is not visible in extension source.
 - **5-claim cap** — the prompt asks Gemini to extract up to 5 factual claims for readability in the popup.
-
----
-
-## Roadmap
-
-- [ ] Add `content.js` to passively scan page content and auto-highlight potentially false claims
-- [ ] Add verdict colour coding (green / yellow / red) to result cards based on Gemini verdicts
-- [ ] Support configurable model and grounding settings
-- [ ] Move API key to a secure backend proxy
-- [ ] Add result caching to avoid redundant API calls for repeated queries
-- [ ] Rename extension to a final project name (e.g. **TruthLens**, **VeritasMark**)
 
 ---
