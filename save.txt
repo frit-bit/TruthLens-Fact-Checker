@@ -1,0 +1,39 @@
+
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+        }
+    ],
+
+
+
+
+    var TEXT = "";
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("extract-text-button").addEventListener("click", extractText);
+    return true;
+});
+
+
+function extractText() {
+    // Get the active tab
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        if(chrome.runtime.lastError) {
+            console.error(chrome.runtime.lastError);
+            alert("Error: " + chrome.runtime.lastError.message);
+            return;
+        }
+        var activeTab = tabs[0];
+        // Send a message to the content script to extract text
+        chrome.tabs.sendMessage(activeTab.id, { action: "extractText" }, function (response) {
+            if (response && response.text) {
+                TEXT = response.text;
+                alert("Extracted Text: " + TEXT);
+            } else {
+                alert("No text extracted.");
+            }
+        });
+    });
+}

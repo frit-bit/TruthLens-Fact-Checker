@@ -228,3 +228,14 @@ A tracked template for API configuration. Use it to create a local `config.js`; 
 - **5-claim cap** — the prompt asks Gemini to extract up to 5 factual claims for readability in the popup.
 
 ---
+
+## Roadmap
+
+- [ ] Add `content.js` to passively scan page content and auto-highlight potentially false claims
+- [ ] Add verdict colour coding (green / yellow / red) to result cards based on Gemini verdicts
+- [ ] Support configurable model and grounding settings
+- [ ] Move API key to a secure backend proxy
+- [ ] Add result caching to avoid redundant API calls for repeated queries
+- [ ] Rename extension to a final project name (e.g. **TruthLens**, **VeritasMark**)
+
+---

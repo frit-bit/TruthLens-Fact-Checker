@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misinformation Detector</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>TruthLens Fact Check</h1>
+        </header>
+
+        <form id="query-form">
+            <label for="input-field">Claim or claims</label>
+            <textarea id="input-field" name="input-field" rows="4" placeholder="Enter claims or select text on a page and press the 'use selected text' button"></textarea>
+            <button type="submit" id="submit-btn">Fact Check</button>
+        </form>
+
+        <div class="actions">
+            <button type="button" id="extract-text-button">Use Selected Text</button>
+            <button type="button" id="close-btn">Close</button>
+        </div>
+
+        <p id="status" role="status"></p>
+        <section id="results" aria-live="polite"></section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
