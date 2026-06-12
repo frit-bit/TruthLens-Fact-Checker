@@ -3,13 +3,12 @@
 }
 
 body {
-    width: 360px;
+    width: 520px;
     margin: 0;
     color: #17202a;
     background: #f7f8fa;
     font-family: Arial, sans-serif;
 }
-
 main {
     padding: 16px;
 }
@@ -86,6 +85,8 @@ button:disabled {
     display: grid;
     gap: 10px;
     margin-top: 12px;
+    max-height: 420px;
+    overflow-y: auto;
 }
 
 .claim {
