@@ -95,7 +95,7 @@ User Input (typed or selected)
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/your-username/LexHack-26-Project.git
+   git clone https://github.com/frit-bit/TruthLens-Fact-Checker.git
    ```
 
 2. Open Chrome and navigate to:
